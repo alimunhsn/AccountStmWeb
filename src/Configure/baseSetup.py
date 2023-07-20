@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
-
 from src.Configure.readPropertices import conf
+from src.Page.Login_Page import LoginInPage
 
 
 @pytest.fixture

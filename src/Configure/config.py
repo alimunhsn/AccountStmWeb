@@ -1,3 +1,3 @@
-BaseUrl = 'https://172.26.8.181:8089/'
-UserName = 'ss2906'
-Password = 'Abcd@0423'
+BaseUrl = 'https://172.25.4.176:8004/#/login'
+UserName = 'admin'
+Password = 'admin'

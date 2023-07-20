@@ -1,4 +1,6 @@
+import pytest
 from seleniumpagefactory import PageFactory
+from src.Configure.readPropertices import conf
 
 
 class LoginInPage(PageFactory):
@@ -7,9 +9,12 @@ class LoginInPage(PageFactory):
         super().__init__()
         self.driver = driver
 
+        username = conf.getUsername()
+        password = conf.getPassword()
+
     locators = {
-        'user_name': ('CSS', "input[placeholder='Enter User ID']"),
-        'password': ('CSS', "#password"),
+        'user_name': ('NAME', "username"),
+        'password': ('NAME', "password"),
         'login_btn': ('CSS', "button[type='submit']")
     }
 
@@ -21,3 +26,9 @@ class LoginInPage(PageFactory):
 
     def click_login(self):
         self.login_btn.click()
+
+    def login_in_page(self):
+        self.select_username(conf.getUsername())
+        self.password.set_text(conf.getPassword())
+        self.login_btn.click()
+        #return self
