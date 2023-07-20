@@ -32,7 +32,3 @@ class Test_User_Manage:
         login = LoginInPage(self.driver)
         login.login_in_page()
 
-    # self.login = LoginInPage(self.driver)
-    # self.login.select_username(self.user_name)
-
-    # self.login.test_login(self.driver)
